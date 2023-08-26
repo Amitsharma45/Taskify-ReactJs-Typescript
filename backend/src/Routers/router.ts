@@ -9,6 +9,9 @@ router.get('/',(req: Request, res: Response)=>{
 router.get('/task',(req: Request, res: Response)=>{
     res.send('hi i am task ts app')
 })
+router.get('/task/:id',(req: Request, res: Response)=>{
+    res.send('hi i am task ts app')
+});
 router.post('/addtodo',createTodo);
 
 export default router;
