@@ -3,10 +3,11 @@ import morgan from 'morgan';
 import bodyParser from 'body-parser';
 import router from './Routers/router';
 import mongoose from 'mongoose';
-
+import cors from 'cors';
 const app = express();
 app.use(bodyParser.json());
 app.use(morgan('dev'));
+app.use(cors());
 
 mongoose.connect('mongodb://localhost:27017/newts');
 mongoose.connection.once('open',()=>{

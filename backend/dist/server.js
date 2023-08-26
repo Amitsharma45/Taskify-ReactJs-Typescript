@@ -8,9 +8,11 @@ const morgan_1 = __importDefault(require("morgan"));
 const body_parser_1 = __importDefault(require("body-parser"));
 const router_1 = __importDefault(require("./Routers/router"));
 const mongoose_1 = __importDefault(require("mongoose"));
+const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 app.use(body_parser_1.default.json());
 app.use((0, morgan_1.default)('dev'));
+app.use((0, cors_1.default)());
 mongoose_1.default.connect('mongodb://localhost:27017/newts');
 mongoose_1.default.connection.once('open', () => {
     console.log('mogodb connected');
