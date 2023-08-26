@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost:27017/newts');
 mongoose.connection.once('open',()=>{
     console.log('mogodb connected');
 })
-app.use(router)
+app.use('/api/v1',router)
 
 app.listen(3001, () => {
     console.log('Server is running at port 3001');

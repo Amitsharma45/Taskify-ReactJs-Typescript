@@ -6,5 +6,8 @@ const router = (0, express_1.Router)();
 router.get('/', (req, res) => {
     res.send('sfsf');
 });
+router.get('/task', (req, res) => {
+    res.send('hi i am task ts app');
+});
 router.post('/addtodo', todoController_1.createTodo);
 exports.default = router;

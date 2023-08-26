@@ -15,7 +15,7 @@ mongoose_1.default.connect('mongodb://localhost:27017/newts');
 mongoose_1.default.connection.once('open', () => {
     console.log('mogodb connected');
 });
-app.use(router_1.default);
+app.use('/api/v1', router_1.default);
 app.listen(3001, () => {
     console.log('Server is running at port 3001');
 });
