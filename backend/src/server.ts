@@ -8,8 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(cors());
-
-mongoose.connect('mongodb://localhost:27017/newts');
+mongoose.connect("mongodb+srv://mongoadmin:amit1234@cluster0.ny6ohvf.mongodb.net/?retryWrites=true&w=majority");
 mongoose.connection.once('open',()=>{
     console.log('mogodb connected');
 })
