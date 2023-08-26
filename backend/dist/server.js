@@ -16,6 +16,9 @@ mongoose_1.default.connection.once('open', () => {
     console.log('mogodb connected');
 });
 app.use('/api/v1', router_1.default);
+app.get('/', (req, res) => {
+    res.send('hi i am ts app');
+});
 app.listen(3001, () => {
     console.log('Server is running at port 3001');
 });
